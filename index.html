@@ -1,0 +1,88 @@
+<!Doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <Title>Ball</Title>
+    <style>
+            #title{
+                width: 100%;
+                height: 80px;
+                background-color: #22426d;
+                text-align: center;
+                padding: 10px;
+            }
+            #title h2{
+                font-size: 30px;
+                color: white;
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            }
+            #container{
+                text-align: center;
+            }
+           #canv_main{
+               margin-top: 10px;
+               border: 4px solid black;
+               display: none;
+           }
+           .finish_class{
+               position: absolute;
+               background-color: lightgray;
+               border: 2px solid black;
+               width: 800px;
+               height: 300px;
+           }
+           .window{
+               padding: 100px;
+               display: block;
+           }
+           .window input{
+               margin-top: 30px;
+               width: 200px;
+               height: 50px;
+               background-color: grey;
+               font-size: 1.3em;
+           }
+           .window p{
+               font-size: 2em;
+               font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+           }
+           .window a{
+               font-size: 1.3em;
+               font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+           }
+           
+           #timer_div{
+               font-size: 2em;
+           }
+           #end_window{
+                display: none;
+           }
+        </style>
+</head>
+
+<body>
+    
+    <div id="title">
+            <h2>Ball in the holl</h2>
+    </div>
+    <div id="container">
+        
+       <canvas id="canv_main" width="500" height="800"></canvas>
+       <div id="start_window" class="window">
+           <p>Rozpocznij grę</p><br>
+           <input type="button" name="Start" value="Start" id="btn_start">
+       </div>
+       <div id="end_window" class="window">
+            <p>Koniec gry</p><br>
+            <a>Twój wynik: </a><a id="score"></a><br>
+            <input type="button" name="Restart" value="Nowa gra" id="btn_new">
+            <input type="button" name="Finish" value="Koniec" id="btn_finish">
+        </div>
+       <div id="timer_div"></div>
+    </div>
+    <pre id="output"></pre>
+    <script src="ball.js"></script>
+</body>
+
+</html>
